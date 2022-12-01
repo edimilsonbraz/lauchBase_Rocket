@@ -1,0 +1,48 @@
+{% extends "./layoutRecipes.njk" %}
+{% import "admin/parts/card.njk" as cards %}
+
+     
+{% block content %}
+{% call cards.render('', 'content') %}
+    <div class="content">
+        <div class="container">
+            <div class="header-buttons">
+            <h2>Gerenciar receitas</h2>
+                <div class="container-buttons">
+                    <a class="buttons" id="cadastrar" href="/admin/recipes/create">Cadastrar receita</a>
+                </div>
+            </div>
+
+            {# {% if recipe.user_id == session.userId or session.isAdmin %} #}
+                <div class="cards_recipes">
+                    {% for recipe in recipes %}
+                        <div class="card_recipes">
+                            <img src="{{ recipe.image }}" alt="">
+                            <div class="card__text">
+                                <h3>{{ recipe.title }}</h3>
+
+                                {% if recipe.creator %}
+                                    <span class="creator">Você é o criador da receita</span><br><br>
+                                {% else %}
+                                    <span>por {{ recipe.chef_name }}</span><br><br>
+                                {% endif %}                
+                                <a href="/admin/recipes/{{ recipe.id }}">Visualizar</a> 
+                            </div>                      
+                        </div>
+                    {% endfor %}
+                </div>
+            {# {% endif %} #}
+        </div>
+
+        <div class="pagination"
+            data-page={{pagination.page}}
+            data-total={{pagination.total}}
+        ></div>
+    </div>
+{%endcall%}
+{% endblock %}
+
+    
+    
+
+   

@@ -1,0 +1,28 @@
+<!-- Header -->
+<section class="header adm">
+      <div class="navbar">
+
+          <a href="/">
+            <img class="logo" src="/images/logo_branca.png" alt="logo FoodFy">
+          </a>
+
+        <div class="links">
+          
+            <a href="/admin/recipes">Receitas</a>
+            <a href="/admin/chefs">Chefs</a>
+            {% if session.isAdmin %}
+              <a href="/admin/users">Usuários</a>
+            {% else %}
+              <a href="/admin/profile" >Minha conta</a>
+            {% endif %}  
+            
+          
+        </div>
+            
+          <form action="/admin/logout" method="POST">
+            <button class="button-sair logout" type="submit"><i class="material-icons" logout>power_settings_new</i></button>
+          </form>
+        
+
+      </div>
+</section>

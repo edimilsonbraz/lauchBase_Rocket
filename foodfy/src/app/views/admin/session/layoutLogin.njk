@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        {% block head %}       
+        {% endblock %}
+
+        {% include 'home/parts/stylesLogin.njk' %} 
+        
+    </head>
+<body>
+    {% include 'home/parts/messages.njk' %}
+    
+    {% include 'home/parts/headerLogin.njk' %}     
+
+    {% block content %} {% endblock %}
+
+    {% include "home/parts/footer.njk" %}
+    
+</body>
+</html>

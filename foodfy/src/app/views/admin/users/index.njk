@@ -1,0 +1,34 @@
+{% extends "./layoutUsers.njk" %}
+    
+{% block content %}
+    <div class="content">
+        <div class="header-buttons"> 
+            <h2>Usuários</h2>
+            <div class="container-buttons">
+                <a class="buttons" id="cadastrar" href="/admin/users/create">Novo</a>
+            </div>
+        </div> 
+
+        <div class="cards-users">
+              
+            {% for user in users %}
+                <div class="card-users">
+                    <div class="info">   
+                        <p class="name">{{user.name}}</p>
+                        <p>{{user.email}}</p>
+
+                        <div class="links users">
+                            <a id="editar" href="/admin/users/{{ user.id }}/edit">Editar</a>
+                            <a id="remover" href="/admin/users/{{ user.id }}/edit">Remover</a>
+                        </div>
+                    </div> 
+                </div> 
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock content %}
+    
+    
+
+   

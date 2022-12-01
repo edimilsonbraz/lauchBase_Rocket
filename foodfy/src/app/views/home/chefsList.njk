@@ -1,0 +1,35 @@
+{% extends "./layout.njk" %}
+
+    {% block head %}
+        <title>Home - Lista de Chefs</title>
+    {% endblock %}
+
+
+{% block content %}
+    <div class="content">
+        <div class="container">
+
+            <div class="cards-chefs">
+                {% for chef in chefs %}
+                    <div class="card-chefs">
+                        <a href="/chef/{{chef.id}}">
+                            <img class="img-chefs" src="{{ chef.image }}" alt="">
+                        </a>  
+                        <div class="text">   
+                            <span class="chef">{{ chef.name}}</span>
+                            <p class="chef">
+                                {% if chef.total_recipes > 1 %}
+                                    {{ chef.total_recipes }} receitas
+                                {% elif chef.total_recipes == 0 %}
+                                    Nenhuma receita cadastrada.
+                                {% else %}
+                                    {{ chef.total_recipes }} receita
+                                {% endif %}
+                            </p>
+                        </div> 
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

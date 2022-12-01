@@ -1,0 +1,361 @@
+/* <!-- Header --> */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header.adm {
+    background-color: #111111;
+    max-width: 100%;
+    width: 100%;
+    padding: 30px 0;
+    margin: 0 0 30px;
+}
+.header.adm form {
+    position: absolute;
+    right: 0;
+    width: fit-content;
+}
+
+.header.adm .navbar {
+    max-width: 940px;
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+.header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar .links {
+    margin: 0;
+}
+.header.adm .navbar .links a {
+    color: #ffffff;
+    font-size: 16px;
+    margin-right: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.header.adm .navbar .links a:hover {
+    color: var(--color-secundary);
+    font-weight: bold;
+}
+.header.adm .navbar .links a.active {
+    color: var(--color-secundary);
+    font-weight: bold;
+}
+
+.header form .logout {
+    padding: 10px 10px;
+    background-color: #111111;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.header .navbar .logo {
+    margin-right: 60px;
+}
+
+
+/*=========== USERS ===========*/
+section.container {
+    display: flex;
+
+    justify-content: space-between;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 0 auto 150px;
+}
+.cards-users {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 42px auto 0;
+}
+.card-users {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    column-gap: 20px;
+    margin: 0px 0 30px;
+}
+
+.card-users h3 {
+    margin: 20px 5px 0px;
+    font-weight: bold;
+}
+.card-users p.name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 0;
+}
+
+.card-users p {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 16px;
+}
+.card-users spam {
+    font-size: 18px;
+}
+
+.card-users a {
+    font-family: Roboto-Bold;
+    font-size: 14px;
+    color: var(--color-rocket);
+    font-weight: bold;
+    
+}
+.card-users a:hover {
+    color: #4a3f9e;
+}
+
+p.user {
+    margin-bottom: 10px;
+}
+
+.container h2 {
+    margin: 12px 0 62px;
+    color: #111111;
+    margin-right: auto;
+}
+
+
+/*==== CREATE FORM ====*/
+
+input, select {
+    width: 465px;
+    height: 36px;
+    background: #FFFFFF;
+    font-size: 16px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    margin: 10px 8px 0 0;
+    outline: none;
+    
+}
+
+input::placeholder {
+    font-size: 16px ;
+    font-weight: normal;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    
+}
+input#checkbox {
+    width: 15px !important;
+    margin: 0 8px 0 0 !important;
+}
+
+select option {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+
+/* <-- INPUT ICON --> */
+input {
+    /* width: 100%; */
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0 0 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+
+    transition: 2s;
+}
+/* arrumar isso */
+input:first-child {  
+    margin-right: 8px;
+}
+input:focus {
+    border-color:#DBD0F4;
+    box-shadow: 0 0 8px 0 #DBD0F4 ;
+}
+.inputWithIcon input {
+    padding-left: 40px;
+}
+
+.inputWithIcon {
+    position: relative;
+}
+
+.inputWithIcon i {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    padding: 8px 8px;
+    color: #aaa;
+    transition: 2s;
+}
+
+.inputWithIcon input:focus + i {
+    color: #DBD0F4;
+}
+
+.senha {
+    margin-top: 8px;
+}
+
+
+/*==== BUTTONS ====*/
+.header-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 42px;
+
+}
+.container-buttons button{
+    margin-left: 8px;
+}
+
+.container-buttons-create {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+}
+
+button {
+    font-size: 16px;
+    color: var(--color-rocket);
+    text-align: right;
+    /* font-weight: bold; */
+    outline: none;
+
+    cursor: pointer;
+
+    background-color: var(--color-rocket);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 4px;
+}
+
+button[type="submit"],
+a.buttons, .buttons {
+    background-color: var(--color-rocket);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    /* font-weight: bold; */
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+
+    transition: 200ms;
+}
+button[type="submit"]:hover {
+    background-color: var(--color-secundary);
+}
+a.buttons:hover {
+    background-color: var(--color-secundary);
+}
+
+button.delete {
+    background-color: rgb(231, 90, 90);
+    margin-left: 4px;  
+    
+    transition: 200ms;
+}
+button.delete:hover {
+    background-color: crimson;
+}
+
+a.buttons.cancel {
+    background-color: #777777;
+    padding: 8px 18px;
+    margin-left: 8px;
+
+    transition: 200ms;
+}
+a.buttons.cancel:hover {
+    background-color: #615f5f;
+}
+
+button.button-sair {
+    background-color: #111111;
+    font-weight: normal;
+    padding: 0px;
+    /* margin: 0 0 0 380px; */
+    transition: 200ms;
+}
+
+button.button-sair:hover {
+    font-weight: bold;
+}
+
+.card-users a#editar {
+    font-size: 14px;
+    color: #4a3f9e;
+    margin-right: 16px;
+    
+}
+.card-users a#editar:hover {
+    font-size: 14px;
+    color: #2f18c0;
+}
+
+.card-users a#remover {
+    font-size: 14px;
+    color: #F55A5A;
+}
+.card-users a#remover:hover {
+    font-size: 14px;
+    color: #eb3030;
+}
+
+/*========== VALIDATE ERROR ==========*/
+.input .error {
+    width: 460px;
+
+    background-color: #e74c3c;
+    padding: 4px;
+    border-radius: 0  0 4px  4px;
+    color: white;
+}
+
+
+/*========== FOOTER ==========*/
+footer {
+    background-color: #EEEEEE;
+    /* margin-top: 62px; */
+    padding: 23px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    
+}
+footer p.copy, a.copy {
+    text-align: center;
+    color: #999999;
+    font-size: 14px;
+    
+} 
+footer a.copy {
+    text-decoration: underline;
+}
+
+/* ============== SHOW-HIDE ============== */
+
+.hide {
+    display: none;
+    visibility: hidden;
+  }

@@ -1,0 +1,587 @@
+/* <!-- Header --> */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header.adm {
+    background-color: #111111;
+    max-width: 100%;
+    width: 100%;
+    padding: 30px 0;
+    margin: 0 0 30px;
+}
+.header.adm form {
+    position: absolute;
+    right: 0;
+    width: fit-content;
+}
+
+.header.adm .navbar {
+    max-width: 940px;
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+.header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar .links {
+    margin: 0;
+    transition: all 0.3s ease 0s;
+}
+.header.adm .navbar .links a {
+    color: #ffffff;
+    font-size: 16px;
+    margin-right: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+.header.adm .navbar .links a:hover {
+    color: var(--color-secundary);
+    font-weight: bold;
+}
+.header.adm .navbar .links a.active {
+    color: var(--color-secundary);
+    font-weight: bold;
+}
+
+.header form .logout {
+    padding: 10px 10px;
+    background-color: #111111;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.header .navbar .logo {
+    margin-right: 60px;
+}
+
+
+/*========== NAV MENU ==========*/
+header {
+    background: #111111;
+}
+nav {
+    max-width: 940px;
+    margin: 0 auto;
+    height: 80px;
+    padding: 38px 0;
+    display: flex;
+    align-items: center;
+
+    justify-content: flex-start;
+    margin-bottom: 36px;
+}
+img.logo {
+    margin-right: 50px;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+    color: #FFFFFF;
+    margin-right: 30px;
+
+}
+.nav__links li a:hover {
+    color: var(--color-secundary);
+    font-weight: bold;
+}
+
+.nav__links li a.active {
+    color: var(--color-secundary);
+    font-weight: bold;
+}
+
+
+/*========== GALLERY ==========*/
+.gallery {
+    width: 100%;
+}
+.highlight img {
+    border-radius: 15px;
+    height: 280px;
+    margin: 24px 0 8px;
+    width: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+    
+    cursor: zoom-in;
+    
+}
+
+.gallery-preview {
+    display: flex;
+
+    align-items: center;
+    -webkit-box-align: center;
+
+    justify-content: flex-end;
+    -webkit-box-pack: end;
+}
+
+.gallery .gallery-preview img {
+    height: 50px;
+    width: 50px; 
+    border-radius: 4px;
+    margin: 0px 2px 4px;
+
+    object-fit: cover;
+    
+    opacity: 0.6;
+
+    cursor: pointer;
+
+    transition: 200ms;
+
+
+}
+.content .gallery-preview img:hover,
+.content .gallery-preview img.active {
+    opacity: 1;
+}
+
+/*========== LIGHTBOX RECIPE ==========*/
+.content .highlight .lightbox-target {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+
+    overflow: hidden;
+    z-index: 100;
+
+    top: -100%;
+    left: 0;
+    opacity: 0;
+
+    transition: opacity 400ms;
+}
+.content .highlight .lightbox-target img {
+    margin: auto;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .3);
+    width: 90%;
+    height: 90%;
+
+    object-fit: contain;
+}
+.content .highlight a.lightbox-close {
+    width: 50px;
+    height: 50px;
+
+    background-color: white;
+
+    position: absolute;
+    top: -80px;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 400ms;
+}
+
+/*=========== CONTEUDO ===========*/
+
+.card__title h1 {
+    text-align: center;
+    margin: 50px 0 5px;
+}
+.card__title p {
+    font-size: 20px;
+    color: #777777;
+    text-align: center;
+}
+.recipe__content {
+    font-size: 18px;
+    color: #444444;
+}
+.recipe__content h4 {
+    font-size: 24px;
+    color: #111111;
+    margin-top: 32px;
+    display: inline-block;
+}
+.recipe__content a {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 4px;
+    background-color: rgb(224, 224, 224);
+    border-radius: 4px;
+    display: inline-block;
+}
+.recipe__content ul li {
+    line-height: 28px;
+    color: #444444;
+    list-style: circle;
+    
+}
+.recipe__content ul {
+    margin-top: 20px;
+}
+.recipe__content p {
+    line-height: 28px;
+    color: #444444;
+    margin-top: 20px;
+}
+
+
+/*========== IMAGES UPLOAD ==========*/
+
+.item #photos {
+    display: flex;
+}
+card__form .item #photos-upload {
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+}
+.item #photos-upload input {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+.card__form .item #photos-upload .box {
+    width: 149px;
+    height: 149px;
+    background-color: rgb(243, 240, 240);
+    border: 1px solid #999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__form .item #photos-preview {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 8px;
+    width: 100%;
+    margin-left: 8px;
+}
+
+.card__form .item #photos-preview img {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+}
+#photos-preview .photo {
+    position: relative;
+}
+#photos-preview .photo i {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(255, 255, 255, 0.8);
+
+    color: red;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 300%;
+    cursor: pointer;
+
+    opacity: 0;
+
+    transition: opacity 200ms;
+}
+#photos-preview .photo:hover i {
+    opacity: 1;
+}
+
+
+/* =============== Cards ===============*/
+.cards_recipes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 0 auto 62px;
+}
+.card_recipes {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    align-items: center;
+    
+}  
+.card__text {
+    margin-left: 20px;
+}
+.container h2 {
+    margin-right: auto;
+   
+}
+
+.card_recipes img {
+    width: 100%;
+    height: 140px;
+    border-radius: 15px;
+
+    object-fit: cover; 
+    object-position: center center;
+}
+
+.card_recipes h3 {
+    margin: 0 0 5px;
+    font-weight: bold;
+}
+.card_recipes span.autor {  /*config autor*/
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 20px;
+}
+
+.card_recipes a {
+    font-family: Roboto-Bold;
+    font-size: 14px;
+    color: var(--color-rocket);
+    font-weight: bold;
+}
+.card_recipes a:hover {
+    color: #4a3f9e;
+}
+
+
+/*========== CREATE FORM ===========*/
+input, select {
+    width: 940px;
+    height: 36px;
+    background: #FFFFFF;
+    font-size: 16px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    margin: 0px auto 0px;
+    outline: none;
+
+}
+input::placeholder {
+    font-size: 16px;
+    
+}
+select option {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    
+}
+textarea {
+    width: 940px;
+    min-height: 150px;
+    background: #FFFFFF;
+    font-family: roboto;
+    font-size: 16px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+
+    margin-top: 10px;
+
+    outline: none;
+}
+
+
+/*=========== BUTTONS ===========*/
+.header-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 42px;
+
+}
+.container-buttons button{
+    margin-left: 8px;
+}
+
+.container a#cadastrar.buttons {
+    margin-bottom: 25px;
+}
+
+button, .button {
+    font-size: 16px;
+    color: var(--color-rocket);
+    text-align: right;
+    font-weight: bold;
+    outline: none;
+
+    cursor: pointer;
+
+    background-color: var(--color-rocket);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 4px;
+
+    margin-top: 8px;
+}
+
+button[type="submit"],
+a.buttons {
+    background-color: var(--color-rocket);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    
+}
+button[type="submit"]:hover {
+    background-color: var(--color-secundary);
+}
+a.buttons:hover {
+    background-color: var(--color-secundary);
+}
+button.delete {
+    background-color: rgb(231, 90, 90);
+    margin-left: 4px;
+
+    transition: 200ms;
+}
+button.delete:hover {
+    background-color: crimson;
+}
+
+button#salvar {
+    margin: 0 20px 0 0;
+}
+
+button.button-sair {
+    background-color: #111111;
+    font-weight: normal;
+    padding: 0px;
+    /* margin: 0 0 0 380px; */
+    transition: 200ms;
+}
+
+button.button-sair:hover {
+    font-weight: bold;
+}
+
+
+/* ============== SHOW-HIDE ============== */
+
+.hide {
+    display: none;
+    visibility: hidden;
+  }
+
+
+/*=========== CARD FORM ===========*/
+
+.card__form h3 {
+    margin: 10px 0 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #333;
+    
+}
+i.material-icons {
+    justify-content: center;
+}
+form .item select {
+    /*Permitir estilizacao no select*/
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* trazer de volta o icone lateral */
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+      linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    background-repeat: no-repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+
+.card a {
+    font-family: Roboto-Bold;
+    font-size: 14px;
+    color: var(--color-rocket);
+    font-weight: bold;
+}
+
+/*==============PAGINAÇÃO=========*/
+.pagination {
+    height: 40px;
+    text-align: center;
+    margin: 42px auto;
+   
+  }
+  
+  .pagination a,
+  .pagination span {
+    margin-right: 16px;
+    font-weight: bold;
+    
+  }
+  
+  .pagination a {
+    border: 1px solid var(--color-placeholder);
+    padding: 5px;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .pagination a:hover {
+    background-color: var(--color-placeholder);
+    color: #FFF;
+    
+  }
+
+
+/*========= Footer =========*/
+footer {
+    background-color: #EEEEEE;
+    margin-top: auto;
+    width: 100%;
+    padding: 23px;
+
+    position: fixed;
+    bottom: 0;
+    
+}
+footer p.copy, a.copy {
+    text-align: center;
+    color: #999999;
+    font-size: 14px;
+    
+} 
+footer a.copy {
+    text-decoration: underline;
+}

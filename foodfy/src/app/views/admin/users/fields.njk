@@ -1,0 +1,46 @@
+<section class="container form">
+
+    <div class="item">
+        <h4>Nome</h4>
+        <div class="inputWithIcon">
+            <input 
+                type="text" 
+                name="name" 
+                placeholder="Nome do usuário" 
+                value="{{ user.name }}" 
+                required="required"
+            >
+            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <div class="item">
+        <h4>Email</h4>
+        <div class="inputWithIcon">
+            <div class="input">
+            <input 
+                type="email" 
+                name="email" 
+                placeholder="Digite seu email" 
+                value="{{ user.email }}" 
+                onblur="Validate.apply(this, 'isEmail')"
+            >
+            </div>
+            <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    
+</section>
+    <div class="checkbox">
+        <input 
+            type="checkbox" 
+            name="is_admin" 
+            id="checkbox" 
+            value="true" 
+            {% if user.is_admin %} 
+                checked="checked"
+            {% endif %}
+        >
+        <h4>Administrador</h4>
+    </div>
