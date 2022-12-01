@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+    --color-green: #37F2C0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    background: #282a36;
+    font-family: 'Roboto', sans-serif;    
+    color: white;
+}
+header {
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 32px;
+    border-bottom: 2px solid #333;
+    text-align: center;
+    box-sizing: border-box;
+    
+}
+
+.links {
+    font-size: 22px;
+}
+.links a + a {
+    margin-left: 32px;
+}    
+.links a {
+    color: white; 
+    text-decoration: none;
+    position: relative;
+}
+.links a.active {
+    font-weight: bold;
+    color: var(--color-green);
+}
+.links a:hover {
+    color: var(--color-green);
+}
+.links a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--color-green);
+    left: 0;
+    bottom: -4px;
+    position: absolute;
+
+}
+.links a:hover::after {
+    width: 100%;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  
+}
+
+/*=== CARD ===*/
+
+.card {
+    background-color: white;
+    width: 800px;
+    min-height: 250px;
+
+    /* espaçamento ao centro*/
+    margin: 45px auto;
+
+    /* grid dividido ao meio*/
+    display: grid;
+    grid-template-columns: 40% 60%; /* DEPOIS MUDAR PARA 40% 60%*/
+
+    /*sobra da caixa primeiro px = eixo x  / segundo pixel = eixo y / terceiro pixel = borrar*/
+    box-shadow: 5px 5px 20px rgba(255, 245, 245, 0.253);
+
+    /* animation */
+    animation-name: fade;
+    animation-duration: 600ms ;
+    
+
+}
+@keyframes fade {
+    0% {
+        padding: 100px;
+    }
+    100% {
+        padding: -100px;
+    }
+}
+
+/*==== DETAILS ====*/
+
+.details {
+    color: black;
+    /* padding: 0 32px 32px; */
+}
+.details .topo {
+    background-color: var(--color-green);
+    padding: 15px;
+    /* height: 100%; */
+    top: 0;
+    
+}
+
+.details .item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px 8px;
+    margin-left: 32px;
+}
+
+.details div:first-child {
+    border-top: none;
+}
+
+/*tira a linha da borda do ultimo elemento*/
+/* .details .item:last-child{
+    border: none;
+} */
+
+/*nth-child(1) pega os primeiros elementos */
+
+.details .item div:nth-child(1) {
+    color: #777;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+.details .item div:nth-child(2) {
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.details h3 {
+    color: #777;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+.details .item span {
+    background-color: var(--color-green);
+    border-radius: 8px;
+    padding: 4px 16px;
+    margin-right: 4px;
+}
+
+/*==== FORM ====*/
+
+input {
+    width: 95%;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 7px;
+    border-radius: 4px;
+}
+input[type="radio"] {
+    width: initial;
+    margin: 8px 4px 4px 8px;
+}
+
+select option {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    
+}
+
+input::placeholder {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.308);
+    font-weight: normal;
+}
+
+button[type="submit"],
+a.button {
+    background-color: var(--color-green);
+    color: white;
+    width: 100px; 
+    padding: 16px 32px;
+    border-radius: 4px;
+    margin: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+    
+}
+
+a.button {      
+    display: inline-block;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    
+}
+a.create {  /*BOTÃO NOVO*/
+    color: white;
+    text-decoration: none;
+    /* position: absolute; */
+    /* right: 275px; */
+    display: inline-block;
+    text-align: center;
+    padding: 8px 16px;
+}
+a.create:hover {
+    background-color: rgb(50, 224, 50);
+    color: #777;
+}
+/* BOTÕES EDITAR / DELETAR */
+#form-delete button[type="submit"] {
+    background-color: lightcoral;
+    display: inline-block;
+       
+}
+        
+.newbutton {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* INDEX TEACHERS*/
+.table-container {
+    display: block;
+    padding: 0 0 20px;
+    box-sizing: border-box;
+    color: black;
+    border-radius: 4px;
+}
+.table-container table {
+    border-spacing: 0;
+    /* width: 100%; */
+}
+thead {
+    background-color: var(--color-green);
+}
+.table-container thead tr th {
+    text-align: center;
+}
+td, th {
+    padding: 16px;
+    border-bottom: 1px solid #d9d9d9;
+    text-align: center;
+    border-radius: 4px;
+ }
+ th {
+    color: #777;
+    text-transform: uppercase;
+
+ }
+ tbody tr:last-child td {
+     border-bottom: none;
+ }
+ tbody tr td:first-child {
+     display: grid;
+     grid-template-columns: 64px 1fr;
+     align-items: center;
+     text-align: left;
+ }
+ tbody tr td:first-child span {
+     width: 40px;
+     height: 40px;
+     background-position: center;
+     background-size: cover;
+     border-radius: 50%;
+     box-shadow: 3px 2px 6px -4px black;
+     border: 2px solid rgb(83, 255, 83);
+ }
+
+ tbody tr td:last-child a,
+ a.create {
+     text-decoration: none;
+     background-color: rgb(50, 224, 50);
+     padding: 10px 16px;
+     text-transform: uppercase;
+     font-size: 12px;
+     border-radius: 4px;
+     font-weight: bold;
+     color: white;
+
+     transition: 200ms;
+     
+ }
+ tbody tr td:last-child a:hover {
+    background-color: rgb(83, 255, 83);
+    color: #777;
+ }
+ a.create:hover {
+    background-color: rgb(83, 255, 83);
+ }
+
+ /* TENTANDO BACKGROUND NO MATTERS */
+ tbody tr td span.item {
+   
+    background-color: aqua;
+    padding: 4px 16px;
+    margin-right: 4px;
+    border-radius: 8px;
+}  
+
+/*==== HEADER FILTER ====*/
+.container {
+    width: 800px;
+    min-height: 250px;
+    margin: 45px auto;
+}
+.container .header {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 0px;
+}
+.container .header a {
+    width: 100px;
+}
+.container .header form {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+}
+.container .header button.filter {
+    padding: 10px;
+}
+
+
+/*==== PAGINATION ====*/
+.pagination {
+    text-align: center;
+}
+.pagination a,
+.pagination span {
+    color: white;
+    text-decoration: none;
+    margin-right: 16px;
+    align-items: center;
+}
+
+.pagination a:hover {
+    color: var(--color-green); 
+    border-bottom: 1px solid var(--color-green);
+    font-weight: bold;
+    
+}
+.pagination a:checked {
+    color: var(--color-green);
+    font-weight: bold;
+}
+
+
+
+
+
+

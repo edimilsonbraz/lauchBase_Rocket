@@ -1,0 +1,30 @@
+{% extends "layout.njk" %}
+{% import "parts/card.njk" as cards %}
+
+{% block content %}
+
+    {% call cards.render('', 'order-success content') %}
+        <div class="container-success">
+            <div class="deleted-lottie"></div>
+                <h2>Deletado com Sucesso!!!</h2>
+                
+                <a href="teachers">Teachers</a>
+                <a href="students">Students</a>
+        </div>    
+    {%endcall%}
+
+    <script src="/lottie.min.js"></script>
+
+    <script>
+        const element = document.querySelector('.deleted-lottie')
+
+        lottie.loadAnimation({
+            container: element, // the dom element that will contain the animation
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: '/deleted-success.json' 
+            });
+    </script>
+
+{% endblock content %}
